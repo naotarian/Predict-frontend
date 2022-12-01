@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import Header from '../components/Parts/Template/Header'
+import Template from '@/components/Templates/Top/Index'
+import WrapperGrid from '@/components/Atoms/WrapperGrid'
 
 export default function Home() {
   return (
@@ -14,9 +16,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <Link href="/result/result_list">
-        <a>一覧</a>
-      </Link>
+      <WrapperGrid template={<Template />} />
     </>
   )
 }
